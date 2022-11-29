@@ -16,6 +16,16 @@ function ChatInput() {
 		setInput("");
 
 		const id = uuid();
+
+		const message = {
+			id,
+			message: messageToSend,
+			created_at: Date.now(),
+			username: "Ruslan Mirets",
+			profilePic:
+				"https://img1.goodfon.ru/original/800x480/c/6d/home-dom-cartoon-multfilm.jpg",
+			email: "ruslan.mirets@gmail.com",
+		};
 	};
 
 	return (
