@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { v4 as uuid } from "uuid";
+import { Message } from "../typings";
 
 function ChatInput() {
 	const [input, setInput] = useState("");
@@ -17,7 +18,7 @@ function ChatInput() {
 
 		const id = uuid();
 
-		const message = {
+		const message: Message = {
 			id,
 			message: messageToSend,
 			created_at: Date.now(),
