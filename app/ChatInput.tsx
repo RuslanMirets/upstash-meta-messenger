@@ -27,6 +27,18 @@ function ChatInput() {
 				"https://img1.goodfon.ru/original/800x480/c/6d/home-dom-cartoon-multfilm.jpg",
 			email: "ruslan.mirets@gmail.com",
 		};
+
+		const uploadMessageToUpstash = async () => {
+			const res = await fetch("/api/addMessage", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({
+					message,
+				}),
+			});
+
+			const data = await res.json();
+		};
 	};
 
 	return (
